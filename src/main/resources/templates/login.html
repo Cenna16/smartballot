@@ -4,6 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>SmartBallot - Login</title>
+
+    <!-- Google Font: Teko -->
+    <link href="https://fonts.googleapis.com/css2?family=Teko:wght@400;500;600;700&display=swap" rel="stylesheet">
+
     <style>
         body {
             margin: 0;
@@ -12,28 +16,31 @@
             justify-content: center;
             align-items: center;
             height: 100vh;
-            background-image: url('/BACKGROUND.jpg'); /* ✅ Background image */
+            background-image: url('/BACKGROUND.jpg'); /* background image */
             background-size: cover;
             background-position: center;
             background-repeat: no-repeat;
-            font-family: Arial, sans-serif;
-            color: white;
+            font-family: 'Teko', sans-serif;
+            color: #182848;
         }
 
         .login-box {
-            background: rgba(255, 255, 255, 0.2); /* ✅ translucent white */
-            padding: 30px;
+            background: rgba(255, 255, 255, 0.8); /* semi-transparent white */
+            padding: 40px;
             border-radius: 20px;
             text-align: center;
-            width: 320px;
-            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+            width: calc(100% - 100px); /* 50px difference left & right */
+            max-width: 400px;
+            max-height: calc(100% - 100px); /* 50px difference top & bottom */
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.4);
             animation: slideIn 1s ease-in-out;
-            backdrop-filter: blur(8px); /* ✅ adds a glass effect */
+            backdrop-filter: blur(10px); /* glass effect */
+            box-sizing: border-box;
         }
 
         h2 {
-            margin-bottom: 10px;
-            font-size: 1.8rem;
+            margin-bottom: 15px;
+            font-size: 2.2rem;
             color: #182848;
         }
 
@@ -45,10 +52,12 @@
             border-radius: 5px;
             text-align: center;
             outline: none;
+            font-family: 'Teko', sans-serif;
+            font-size: 1.1rem;
         }
 
         .btn {
-            background-color: #182848;
+            background-color: #5dade2; /* light blue */
             color: white;
             padding: 10px 20px;
             font-size: 1rem;
@@ -57,11 +66,12 @@
             cursor: pointer;
             margin: 5px;
             transition: all 0.2s ease-in-out;
+            font-family: 'Teko', sans-serif;
         }
 
         .btn:hover {
             transform: scale(1.05);
-            background-color: #2d3c6a;
+            background-color: #3498db; /* slightly darker on hover */
         }
 
         @keyframes slideIn {
@@ -70,14 +80,14 @@
         }
 
         .error {
-            color: #ffcccc;
+            color: #e74c3c;
             font-size: 0.9rem;
             margin-top: 10px;
         }
 
         p.note {
             font-size: 0.85rem;
-            color: #333;
+            color: #182848;
         }
     </style>
 </head>

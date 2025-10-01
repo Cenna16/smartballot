@@ -4,6 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>SmartBallot - Home</title>
+
+    <!-- Google Font: Teko -->
+    <link href="https://fonts.googleapis.com/css2?family=Teko:wght@400;500;600;700&display=swap" rel="stylesheet">
+
     <style>
         body {
             margin: 0;
@@ -12,34 +16,49 @@
             justify-content: center;
             align-items: center;
             height: 100vh;
-            background-image: url('/BACKGROUND.jpg'); /* ✅ Corrected path */
+            background-image: url('/BACKGROUND.jpg');
             background-size: cover;
             background-position: center;
             background-repeat: no-repeat;
-            font-family: Arial, sans-serif;
+            font-family: 'Teko', sans-serif;
             color: #182848;
             text-align: center;
         }
 
         .container {
-            background: rgba(255, 255, 255, 0.8); /* ✅ changed from black to white with transparency */
-            padding: 60px; /* ✅ increased padding */
-            border-radius: 30px; /* ✅ softer corners */
-            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.4); /* more depth */
-            max-width: 500px; /* ✅ wider card */
-            width: 90%;
+            background: rgba(255, 255, 255, 0.75);
+            padding: 50px;
+            border-radius: 20px;
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.4);
+            max-width: calc(100% - 100px);  /* 50px difference on left & right */
+            width: 100%;
+            max-height: calc(100% - 100px); /* 50px difference on top & bottom */
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
             animation: fadeIn 1s ease-in-out;
+            box-sizing: border-box;
         }
 
         .logo {
-            width: 180px; /* ✅ increased size */
-            margin-bottom: 30px;
+            width: 300px;
+            margin-bottom: 0px; /* Reduced gap below logo */
             animation: fadeIn 1s ease-in-out;
         }
 
         h1 {
-            margin-bottom: 20px;
-            font-size: 2.5rem;
+            margin-top: 10px;   /* Reduced gap above heading */
+            margin-bottom: 5px;
+            font-size: 3rem;    /* Slightly bigger for Teko */
+            font-weight: 700;
+        }
+
+        p {
+            margin-bottom: 25px;
+            font-size: 1.3rem;
+            font-weight: 500;
         }
 
         .btn {
@@ -48,10 +67,11 @@
             color: white;
             padding: 12px 28px;
             font-size: 1.1rem;
+            font-weight: 600;
             border: none;
             border-radius: 25px;
             cursor: pointer;
-            margin: 12px;
+            margin: 10px;
             text-decoration: none;
             transition: all 0.2s ease-in-out;
         }
@@ -69,8 +89,7 @@
 </head>
 <body>
 <div class="container">
-    <!-- ✅ Logo -->
-    <img src="/logo.png" alt="SmartBallot Logo" class="logo">
+    <img src="/logosmart.png" alt="SmartBallot Logo" class="logo">
     <h1>Welcome to SmartBallot</h1>
     <p>Choose your action below:</p>
     <a href="/login" class="btn">Login</a>
